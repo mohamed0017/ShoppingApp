@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Shopping"
 include(":app")
- 
+include(":core")
+include(":data")
+include(":ui-components")
