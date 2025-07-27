@@ -12,6 +12,8 @@ kapt {
     correctErrorTypes = true
 }
 
+//apply(from = "../gradle/scripts/hilt-module.gradle.kts")
+
 android {
     namespace = "com.personal.shopping"
     compileSdk = 35
@@ -69,5 +71,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation(project(":core"))
+    implementation(project(":feature-product"))
+
 
 }

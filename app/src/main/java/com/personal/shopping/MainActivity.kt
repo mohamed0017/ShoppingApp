@@ -1,5 +1,6 @@
 package com.personal.shopping
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.feature_product.HomeActivity
 import com.personal.shopping.navigation.AppNavHost
 import com.personal.shopping.ui.theme.ShoppingTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,6 +21,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+
             ShoppingTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(
