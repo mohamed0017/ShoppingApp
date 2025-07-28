@@ -1,4 +1,38 @@
+.idea/
 *.iml
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local configuration
+local.properties
+
+# Signing files
+*.jks
+*.keystore
+
+# Log/Temp files
+*.log
+*.tmp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Kotlin
+*.class
+*.kt.bak
+*.kts.bak
+
+# Others
+.env
+*.bak
+*.swp
+
 .gradle
 /local.properties
 /.idea/caches
@@ -7,9 +41,7 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
