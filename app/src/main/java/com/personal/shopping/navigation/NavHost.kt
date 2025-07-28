@@ -1,28 +1,30 @@
 package com.personal.shopping.navigation
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.feature_product.ui.products.ProductListScreen
 import kotlinx.serialization.Serializable
 
 @Serializable
 data object ProductsListing
 
-@Composable
-fun ProductsListingScreen(navController1: NavHostController) {
-    Text("products Listing")
-}
+@Serializable
+data object ProductDetails
+
 
 @Composable
 fun AppNavHost() {
 
     val navController = rememberNavController()
     NavHost(navController, startDestination = ProductsListing) {
+
         composable<ProductsListing> {
-            ProductsListingScreen(navController)
+            ProductListScreen(emptyList())
+        }
+
+        composable<ProductDetails> {
         }
     }
 }
